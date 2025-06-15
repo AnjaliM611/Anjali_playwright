@@ -1,8 +1,8 @@
 const { test, expect } = require('@playwright/test');
 
-import data from "../testData/addjobtitle.json"
+import data from "../../testData/Addjobtitle.json"
 
-import logindata from "../testData/login.json"
+//import logindata from "../../testData/login.json"
 
 test.describe('Add Job Title Feature', () => {
 
@@ -10,9 +10,9 @@ test.describe('Add Job Title Feature', () => {
 
         await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
-        await page.locator("input[name='username']").fill(logindata.username)
+        await page.locator("input[name='username']").fill(process.env.org_username="Admin")
 
-        await page.locator("input[type='password']").fill(logindata.password)
+        await page.locator("input[type='password']").fill(process.env.org_password="admin123")
 
         await page.locator("button[type='submit']").click()
 
@@ -27,7 +27,7 @@ test.describe('Add Job Title Feature', () => {
         await page.locator("//textarea[@placeholder='Type description here']").fill(data.JobDescription)
         await page.locator("//textarea[@placeholder='Add note']").fill(data.Note)
         await page.locator('button[type="submit"]').click()
-        await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/admin/saveJobTitle')
+        await expect(page).toHaveURL("https://opensource-demo.orangehrmlive.com/web/index.php/admin/viewJobTitleList",{timeout:10000})
        
 
 

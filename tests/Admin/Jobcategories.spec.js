@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
-import logindata from '../testData/login.json'
+import logindata from '../../testData/login.json'
 
-import addjobcategories from '../testData/jobcategory.json'
+import addjobcategories from '../../testData/jobcategory.json'
 
 test('Verify add job categories', async ({ page }) => {
 

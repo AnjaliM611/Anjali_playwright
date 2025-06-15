@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test'
-import logindata from '../testData/login.json'
-import Employementstatus from '../testData/employeestatus.json'
+import logindata from '../../testData/login.json'
+import Employementstatus from '../../testData/employeestatus.json'
 
 test.describe('verify add employee status details', () => {
 
