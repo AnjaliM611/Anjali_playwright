@@ -46,19 +46,20 @@ console.log(a%b)*/
 
  //ASSIGNMENT OPERATORS
 
- var a=2
+ /*var a=2
      b=3
     console.log ( a==b) //false
     console.log ( 3==3)    //true
     console.log ( "Anju"=="Anju")  //true
     console.log ( "Anju"==="Anju") //true
     console.log ( "Anju"==="1234") //false //it will  compare not only values but also datatypes 
-    console.log ( 31==="31")       //false
-    console.log ( 1234=="1234")      //true  // it will just compare only values but not datatypes             
-    console.log ( a<=b)            //true
-    console.log ( a>=b)            //false
+    console.log ( 4==="4")  */   //false
+    //console.log ( 4==="shiva")   
+    //console.log ( 1234=="1234")      //true  // it will just compare only values but not datatypes             
+   // console.log ( a<=b)            //true
+   // console.log ( a>=b)            //false
 
-    var a=5
+   var a=5
       a+=4
       console.log ( a)   //9
 
@@ -84,6 +85,7 @@ console.log(a%b)*/
 
 //consdition ? value1 : value2
 
-x  =   4==4? value1 : value2
+//x  =   4==4? value1 : value2  //Anju
+x  =   4==="5"? value1 : value2
 
 console.log(x)
