@@ -68,13 +68,5 @@ console.log(typeof(a)) */ //boolean
   console.log(arr[0]<=arr[1]) */   //using operators in array
 
 
-  emp  =  {
-          firstname:"anjali",
-          employeid:"43265",
-           place :"blr"
-         }
-  console.log(emp.firstname)
-   console.log(emp.employeid)
-    console.log(emp.place)            // creating object
-
+ 
     

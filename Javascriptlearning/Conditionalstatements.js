@@ -46,5 +46,9 @@ else{
         console.log("4 th month is apr")
     }
     break;
+    default:{
+      console.log ("jai hanuman" )
+    }
+    break;
   }
  
