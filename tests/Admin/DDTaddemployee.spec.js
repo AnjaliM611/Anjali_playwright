@@ -22,7 +22,6 @@ import { test, expect } from '@playwright/test';
         await page.locator("//input[@placeholder='First Name']").fill(addemployee[employee])//+randomtext)
        await page.locator(" //input[@placeholder='Last Name']").fill("M")
        await page.locator("//button[@type='submit']").click()
-        
-
+            // await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/320')
     })
    }
