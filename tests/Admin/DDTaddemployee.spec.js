@@ -10,7 +10,7 @@ import { test, expect } from '@playwright/test';
     for (let employee in addemployee ){  
 
  test(`verify login functionality with add employee -${addemployee[employee].firstname}`,async({page})=>{
-    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    await pagc.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
         await page.locator("input[name='username']").fill("Admin")
 
@@ -24,5 +24,6 @@ import { test, expect } from '@playwright/test';
         await page.locator("//input[@placeholder='First Name']").fill(addemployee[employee].firstname)//+randomtext)
        await page.locator(" //input[@placeholder='Last Name']").fill(addemployee[employee].lastname)
        await page.locator("//button[@type='submit']").click()
- })
+            // await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewPersonalDetails/empNumber/320')
+    })
    }

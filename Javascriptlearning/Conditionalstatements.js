@@ -30,19 +30,19 @@ else{
 
 //Switch statements
   switch("mar"){
-    case("jan"):{
+    case "jan":{
         console.log("1 st month is jan")
     }
     break;
-    case("feb"):{
+    case "feb":{
         console.log("2 nd month is feb")
     }
     break;
-     case("mar"):{
+     case "mar":{
         console.log("My bithday month is march")
     }
     break;
-     case("apr"):{
+     case "apr":{
         console.log("4 th month is apr")
     }
     break;
