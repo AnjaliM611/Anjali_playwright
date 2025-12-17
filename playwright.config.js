@@ -16,7 +16,7 @@ export default defineConfig({
   globalTimeout:60*60*1000,//3600000
   timeout:60000,
   expect:{
-    timeout:60000,
+    timeout:80000,
   
 
   },
@@ -42,21 +42,28 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
-  projects: [
+   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+        name:"setup",
+        use: { ...devices['Desktop Chrome'] ,
+          channel:"chrome"
+        },
+        testMatch:/.*\.setup\.js/, 
     },
+    // {
+    //   name: 'chromium',
+    //   use: { ...devices['Desktop Chrome'] },
+    // },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
@@ -73,11 +80,14 @@ export default defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
-  ],
+    {
+      name: 'Google Chrome',
+       use: { ...devices['Desktop Chrome'], channel: 'chrome', 
+       storageState:".auth/user.json",
+     },
+     dependencies:["setup"],
+    },
+   ],
 
   /* Run your local dev server before starting the tests */
   // webServer: {

@@ -3,8 +3,8 @@
 // }
 // printMessage()
 
-// add=(a,b)=> a+b
-// console.log(add(2,4))
+ad1=(a,b)=> a+b
+ console.log(ad1(3,4))
 
 add=(a,b)=> console.log(a+b)
 add(3,4)

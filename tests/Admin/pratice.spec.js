@@ -1,0 +1,23 @@
+import { test, expect } from '@playwright/test';
+test("automation practice,", async ({page}) => {
+    await page.goto("https://testautomationpractice.blogspot.com/")
+    await page.locator('//input[@class="form-control"][1]').fill("Anjali")
+    await page.locator('//input[@id="phone"]').fill("anju@gmail.com")
+    await page.locator('//input[@class="form-control"][2]').fill("9347911786")
+    await page.locator('//textarea[@class="form-control"]').fill("Bengaluru")
+    await page.locator('//input[@id="female"]').check()
+    await page.locator('//input[@value="monday"]').check()
+    await page.locator('(//select[@class="form-control"])[2]').click()
+    await page.locator('//option[@value="red"][1]').click()
+    await page.locator('//option[@value="deer"][1]').click()
+    await page.locator('input[id="datepicker"]').fill('03/18/2000')
+    await page.waitForTimeout(5000)
+    await page.locator('input[name="SelectedDate"]').click()
+    await page.locator('//div[@id="ui-datepicker-div"]').click('6')
+    //await page.waitForTimeout(5000)
+    await page.locator('//select[@aria-label="Select month"]').selectOption("Mar")
+    await page.locator('select[class="ui-datepicker-year"]').selectOption("2020")
+    await page.locator('input[id="start-date"]').fill("06/03/2")
+    //await page.locator('(//button[@type="submit"])[1]').setInputFiles("testData\Happy Anniversary - Cards - Gratitude Is Mine.jpeg")
+
+})

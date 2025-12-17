@@ -12,6 +12,10 @@ class animal extends vehicle{
 }
 class makeup extends vehicle{
     lipstick(){
+
+        const obj11=new makeup();
+        obj11.bike();0
+
         console.log("maybelline");
         
     }

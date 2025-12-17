@@ -10,8 +10,16 @@ await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/lo
  //
 //await page.locator("//a[@href='/web/index.php/admin/viewAdminModule']").click();
 //And 
-await page.locator("//input[@class='oxd-input oxd-input--active'][@name='username']").fill("Admin")
+// await page.locator("//input[@class='oxd-input oxd-input--active'][@name='username']").fill("Admin")
+// await page.locator("//input[@class='oxd-input oxd-input--active' and @name='username']").fill("Admin")
+
+//or
+await page.locator("//input[@class='oxd-input oxd-input--active' or @name='username']").fill("Admin")
 //partial test(contains)
 await page.locator('//input[contains(.,"pass")]').fill("admin123")
+//start with
+//ends with
+//Indexing
+//parent childnode traversing
 
 })

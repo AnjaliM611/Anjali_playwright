@@ -1,6 +1,6 @@
 /*class Empname{
     static anjali(){
-        console.log("software testegineer")         // without creating object calling methods and variables
+        console.log("software testengineer")         // without creating object calling methods and variables
     }
     jamuna(){
        console.log("QA testegineer") 

@@ -10,7 +10,7 @@ import { test, expect } from '@playwright/test';
     for (let employee in addemployee ){  
 
  test(`verify login functionality with add employee -${addemployee[employee].firstname}`,async({page})=>{
-    await pagc.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
         await page.locator("input[name='username']").fill("Admin")
 
