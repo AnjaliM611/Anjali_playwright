@@ -12,7 +12,9 @@ import{test,expect } from '@playwright/test';
 
      })
 
-//    test("check cart" ,async()=>{
-//        await page.goto ("https://www.saucedemo.com/cart.html")
-//     })
+     test("check cart" ,async(page)=>{
+     await page.goto ("https://www.saucedemo.com/cart.html")
+        await page.locator('//a[@class="shopping_cart_link"]').click()
+       
+    })
 })
